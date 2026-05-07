@@ -1,0 +1,26 @@
+---
+import { sellingPoints } from "../../config/sellingPoints";
+import Card from "../ui/Card.astro";
+---
+
+<section class="selling-container">
+  <h2 class="section-header">Det finst ingen snarveg til godt brød.</h2>
+  <p class="section-ingress">
+    Vi har alltid bakt på same måten — med levande surdeig, norske råvarer og
+    hender som kjenner deigen. Ikkje fordi det er enkelt, men fordi det er rett.
+  </p>
+  <div class="content-center">
+    <div class="card-grid">
+      {
+        sellingPoints.map((sp) => (
+          <Card
+            icon={sp.icon}
+            heading={sp.heading}
+            body={sp.body}
+            cta={sp.cta}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

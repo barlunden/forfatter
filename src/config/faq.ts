@@ -1,0 +1,6 @@
+export const faq = [
+    { question: "Når er de opne, og kor finn eg dykk?", answer: "Vi held ope tysdag til laurdag, frå klokka 07 til brødet er utselt — og det skjer oftare enn vi likar å innrømme. Du finn oss i Nedre Korskirkeallmenningen 4. Parkering er enklast frå Christiesgate." },
+    { question: "Kva er eigentleg surdeig, og kvifor tek det så lang tid?", answer: "Surdeig er ein levande kultur av mjøl og vatn der naturlege gjærsopp og mjølkesyrebakteria gjer hevingsarbeidet. Prosessen tek mellom 18 og 36 timar — det er ikkje tregheit, det er det som gjev brødet smak, struktur og haldbarheit." },
+    { question: "Korleis melder eg meg på kurs, og treng eg forkunnskapar?", answer: "Kursa våre er opne for alle — du treng ikkje ha baka surdeig før. Påmelding skjer via kurssida, og vi tilrår å melde seg på tidleg; plassane går fort. Alle kurs inkluderer gjennomgang av teori, praktisk baking og eit ferdig brød å ta med heim." },
+    { question: "Kor lenge held brødet seg, og korleis oppbevarer eg det best?", answer: "Eit godt surdeigsbrød held seg gjerne tre til fem dagar om det ligg i eit kjøkentørkle — ikkje plastpose, det gjer skorpa mjuk. Vil du ha det ferskt lenger, skjer du det i skiver og frys det ned same dag." },
+]

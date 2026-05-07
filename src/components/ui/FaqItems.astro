@@ -1,0 +1,12 @@
+---
+interface Props {
+    question: string;
+    answer: string;
+}
+
+const { question, answer } = Astro.props;
+---
+<section class="faq-item">
+    <h3 class="faq-question">{question}</h3>
+    <p class="faq-answer">{answer}</p>
+</section>

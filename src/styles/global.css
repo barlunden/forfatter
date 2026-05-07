@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fargar */
+  --color-primary: #c1440e; /* Terrakotta – ovnar, varme */
+  --color-secondary: #6b7c3f; /* Olivengrøn – kortreist, natur */
+  --color-accent: #d4a853; /* Gull/amber – honning, skorpe */
+  --color-background: #faf6ef; /* Varm krem – mjøl */
+  --color-surface: #f0e8d8; /* Litt mørkare krem – kort, flater */
+  --color-text: #2c2c2c; /* Koksgrå – lesbar tekst */
+  --color-text-light: #6b6560; /* Lysare tekst – ingress, meta */
+
+  /* Typografi */
+  --text-company: clamp(3rem, 8vw, 5.5rem);
+  --text-hero: clamp(2rem, 8vw, 4rem);
+  --text-headers: clamp(2rem, 6vw, 2.5rem);
+  --text-card-headers: clamp(1rem, 3vw, 1.2rem);
+
+  --padding-fluid: clamp(1rem, 4vw, 2.5rem);
+  --padding-fluid-card: clamp(0.7rem, 3vw, 1.3rem);
+
+  /* Skrifttypar */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+@layer components {
+  body {
+    @apply font-body bg-background text-text antialiased;
+  }
+
+  /* NavBar */
+  .navbar {
+    @apply flex justify-between items-center px-8 py-5 bg-background text-text;
+  }
+
+  .company-name {
+    @apply font-heading text-3xl font-semibold;
+  }
+
+  .company-tagline {
+    @apply italic sr-only sm:not-sr-only;
+  }
+
+  .nav-items {
+    @apply flex gap-5;
+  }
+
+  /* HERO */
+  .hero-full {
+    @apply relative w-full h-screen flex bg-cover bg-[url(../assets/images/hero.png)] bg-center bg-no-repeat bg-fixed;
+  }
+
+  .hero-overlay {
+    @apply bg-black/50 w-full h-full flex items-center justify-center;
+  }
+
+  .hero-content {
+    @apply text-white text-center px-fluid py-5;
+  }
+
+  .hero-title {
+    @apply mb-1 text-hero font-bold font-heading;
+  }
+
+  .cta-group {
+    @apply h-fit my-5;
+  }
+
+  /* SiteWide Rules */
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/80 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-primary bg-background hover:bg-background/60;
+  }
+
+  .btn-white {
+    @apply border-2 border-white text-white hover:bg-white hover:text-primary transition-colors;
+}
+
+  /* Headers */
+
+  .section-header {
+    @apply text-center pb-2 px-4 font-bold text-headers font-heading;
+  }
+
+  .section-ingress {
+    @apply text-center w-full md:w-2/3 mx-auto px-fluid;
+  }
+
+  /* SellingPoints */
+
+  .selling-container {
+    @apply h-fit bg-background py-20;
+  }
+
+  .card-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-evenly p-fluid pb-20 gap-6;
+  }
+
+  /* Card */
+  .card {
+    @apply flex flex-col w-full p-fluid-card pb-6 bg-surface rounded-lg shadow-md hover:shadow-lg hover:scale-101 transition-all;
+  }
+
+  .card-header {
+    @apply font-bold text-card-headers text-shadow-sm text-center py-3 text-shadow-zinc-500/50 text-black pb-2;
+  }
+
+  .card-body {
+    @apply text-sm grow;
+  }
+
+  /* Testimonials */
+  .testimonial-container {
+    @apply bg-surface h-fit py-20
+  }
+
+  .testimonial-grid {
+    @apply grid p-fluid pb-20 gap-10;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  }
+
+  .testimonial-card {
+    @apply relative flex flex-col bg-linear-120 from-accent/20 to-accent/40 border-accent border-2 rounded-2xl p-fluid-card shadow-lg;
+  }
+
+  .testimonial-quote {
+    @apply relative pt-8 pb-4 grow;
+  }
+
+  .testimonial-quote::before {
+    content: "\00AB"; /* " */
+    @apply absolute -top-5 left-0 text-6xl text-accent;
+  }
+
+  .testimonial-avatar {
+    @apply absolute -bottom-2 -right-2 rounded-xl transition-transform hover:rotate-6 hover:scale-101 rounded-br-3xl border-accent/50 border-2 shadow-sm w-fit;
+  }
+
+  .testimonial-name {
+    @apply font-heading font-semibold;
+  }
+
+  .testimonial-title {
+    @apply text-sm;
+  }
+
+  .testimonial-rating {
+    @apply pt-2 text-accent text-2xl
+  }
+
+  /* FAQ */
+
+  .faq-container {
+    @apply bg-surface h-fit py-20
+  }
+
+  .faq-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 justify-evenly p-fluid pb-20 gap-6;
+  }
+
+  .faq-item {
+    @apply relative flex flex-col bg-linear-150 from-secondary/15 to-primary/15 hover:bg-text/90 hover:border-text/95 hover:text-background p-fluid-card rounded-lg border-2 border-accent/30 transition-colors duration-200 shadow-2xl
+  }
+
+  .faq-question {
+    @apply font-heading font-semibold text-lg pb-4 pl-5
+  }
+
+  .faq-question::before {
+    content: "\003F"; /* ? */
+    @apply absolute top-2 md:top-3 left-3 md:left-4 text-3xl md:text-4xl text-accent;
+  }
+
+  .faq-answer {
+    @apply italic font-normal
+  }
+
+  /* CTA */
+
+  .cta-container {
+    @apply flex flex-col items-center bg-text text-background py-20
+  }
+
+  .cta-buttons {
+    @apply justify-center w-fit mx-auto pt-14 grid grid-cols-1 md:grid-cols-2 gap-6
+  }
+
+  /* Footer */
+
+  .footer {
+    @apply bg-surface pb-5
+  }
+
+  .footer-title {
+    @apply pb-12 md:pr-7 text-center md:text-right
+  }
+
+  .footer-title h3 {
+    @apply text-company font-bold font-heading
+  }
+
+  .footer-title p {
+    @apply italic text-card-headers font-semibold
+  }
+
+  .footer-address {
+    @apply flex gap-2 items-start
+  }
+
+  .footer-cols {
+    @apply bg-surface h-fit grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] px-fluid gap-4 pt-fluid md:pt-12 md:pb-8
+  }
+
+  .footer-container-1 {
+    @apply flex flex-col gap-3
+  }
+
+  .footer-container-2 {
+    @apply flex flex-col gap-2
+  }
+
+  .footer-container-3 {
+    @apply text-left
+  }
+
+  .footer-container-header {
+    @apply text-card-headers font-bold
+  }
+
+  .footer-some-container {
+    @apply flex gap-4 md:pt-4
+  }
+
+  .copyright {
+    @apply w-fit mx-auto pt-4
+  }  
+}

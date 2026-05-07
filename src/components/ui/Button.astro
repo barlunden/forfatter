@@ -1,0 +1,22 @@
+---
+// src/ui/Button.astro
+interface Props {
+    href?: string;
+    variant?: 'primary' | 'secondary'
+    class?: string;
+    [x: string]: any;
+}
+
+const { href, variant = 'primary', class: className, ...rest } = Astro.props;
+
+const Element = href ? 'a' : 'button';
+
+const elementClasses = [
+    'btn', variant === 'primary' ? 'btn-primary' : 'btn-secondary',
+    className
+].join(' ');
+---
+
+<Element href={href} class={elementClasses} {...rest}>
+    <slot />
+</Element>

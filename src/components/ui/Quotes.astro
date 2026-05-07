@@ -1,0 +1,25 @@
+---
+// src/componentes/ui/Quotes.astro
+
+interface Props {
+  quote: string;
+  name: string;
+  title: string;
+  rating: number;
+  image?: string;
+}
+const { quote, name, title, rating, image } = Astro.props;
+---
+
+<section class="testimonial-card">
+  <blockquote class="testimonial-quote">{quote}</blockquote>
+
+  <div class="testimonial-author">
+    {image && <img src={image} alt={name} class="testimonial-avatar" />}
+    <div>
+      <cite class="testimonial-name">{name}</cite>
+      <p class="testimonial-title">{title}</p>
+    </div>
+  </div>
+  <p class="testimonial-rating">{"★".repeat(rating)}{"☆".repeat(5 - rating)}</p>
+</section>

@@ -1,0 +1,14 @@
+---
+import { faq } from "../../config/faq"
+import FaqItems from "../ui/FaqItems.astro"
+---
+<section class="faq-container">
+    
+        <h2 class="section-header">Ofte stilte spørsmål</h2>
+        <div class="faq-grid">
+            {faq.map((qa) => (
+                <FaqItems {...qa} />
+            ))}
+        </div>
+    
+</section>

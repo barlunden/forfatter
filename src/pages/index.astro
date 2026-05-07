@@ -1,17 +1,22 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/sections/Hero.astro";
+import SellingPoints from "../components/sections/SellingPoints.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
+import FAQ from "../components/sections/Faq.astro";
+import Cta from "../components/sections/Cta.astro";
+import Button from "../components/ui/Button.astro";
 
+// Overstyre variant av knapp med custom class.
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Front page">
+  <Hero />
+  <SellingPoints />
+  <Testimonials />
+  <FAQ />
+  <Cta heading="Omnen er varm. Døra er open." ingress="Det beste brødet er det du et medan det framleis er ferskt. Kom innom - eller lær å bake sjølv.">
+    <Button href="/" variant="secondary">Sjå kurskalender ➤</Button>
+    <Button href="/" class="btn-white">Finn oss ➤</Button>
+  </Cta>
+</BaseLayout>

@@ -1,0 +1,85 @@
+---
+import { navLinks } from "../../config/nav.ts";
+---
+
+<nav class="navbar">
+  <div>
+    <a class="company-name" href="/">Elden Bakeri</a>
+    <p class="company-tagline">- Surdeigsbrød bakt med tolmod og eld</p>
+  </div>
+  <div class="hidden md:flex">
+    <ul class="nav-items">
+      {
+        navLinks.map((p) => (
+          <li>
+            <a href={p.href}>{p.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <button
+    id="menu-toggle"
+    class="md:hidden flex flex-col gap-1.5 z-50 mix-blend-difference"
+    aria-label="Meny"
+  >
+    <span
+      class="w-6 h-0.5 bg-white transition-transform duration-300 origin-center"
+      id="line1"></span>
+    <span class="w-6 h-0.5 bg-white transition-opacity duration-300" id="line2"
+    ></span>
+    <span
+      class="w-6 h-0.5 bg-white transition-transform duration-300 origin-center"
+      id="line3"></span>
+  </button>
+
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 bg-surface z-40 translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center text-lg space-y-6"
+  >
+    {navLinks.map((p) => <a href={p.href}>{p.name}</a>)}
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const line1 = document.getElementById("line1");
+  const line2 = document.getElementById("line2");
+  const line3 = document.getElementById("line3");
+  let isMenuOpen = false;
+
+  menuToggle?.addEventListener("click", () => {
+    isMenuOpen = !isMenuOpen;
+
+    // Toggle menu visibility
+    mobileMenu?.classList.toggle("translate-x-full", !isMenuOpen);
+
+    // Animate hamburger to X
+    if (isMenuOpen) {
+      line1?.classList.add("translate-y-2", "rotate-45");
+      line2?.classList.add("opacity-0");
+      line3?.classList.add("-translate-y-2", "-rotate-45");
+      document.body.style.overflow = "hidden"; // Stop scrolling
+    } else {
+      line1?.classList.remove("translate-y-2", "rotate-45");
+      line2?.classList.remove("opacity-0");
+      line3?.classList.remove("-translate-y-2", "-rotate-45");
+      document.body.style.overflow = ""; // Resume scrolling
+    }
+  });
+
+  // Close menu when clicking a link
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      isMenuOpen = false;
+      mobileMenu?.classList.add("translate-x-full");
+      line1?.classList.remove("translate-y-2", "rotate-45");
+      line2?.classList.remove("opacity-0");
+      line3?.classList.remove("-translate-y-2", "-rotate-45");
+      document.body.style.overflow = "";
+    });
+  });
+</script>

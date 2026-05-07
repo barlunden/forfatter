@@ -1,0 +1,17 @@
+---
+// src/components/sections/Testimonials.astro
+
+import { testimonials } from "../../config/testimonials";
+import Quotes from "../ui/Quotes.astro";
+---
+
+<section class="testimonial-container">
+  <h2 class="section-header">Dei same ansikta, veke etter veke.</h2>
+  <p class="section-ingress">Nokre kjem for brødet. Nokre for kurset. Nokre berre for lukta. Men alle kjem att.</p>
+  <div class="content-center">
+
+    <div class="testimonial-grid">
+      {testimonials.map((item) => <Quotes {...item} />)}
+    </div>
+  </div>
+</section>

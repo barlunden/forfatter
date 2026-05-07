@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    icon: string;
+    heading: string;
+    body: string;
+    cta: string;
+}
+
+const { icon, heading, body, cta } = Astro.props;
+
+---
+
+<article class="card">
+  <Icon name={icon} class="w-12 h-12 place-self-center pt-2" />
+  <h3
+    class="card-header"
+  >
+    {heading}
+  </h3>
+  <p class="card-body">{body}</p>
+  <a href="#" class="btn btn-secondary block text-center mx-auto mt-3">{cta}</a>
+</article>

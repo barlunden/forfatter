@@ -1,0 +1,20 @@
+---
+import Button from '../ui/Button.astro';
+
+interface Props {
+    heading: string;
+    ingress?: string;
+}
+
+const { heading, ingress } = Astro.props
+---
+<section class="cta-container">
+    <h2 class="section-header">{heading}</h2>
+    {ingress && <p class="section-ingress">{ingress}</p>}
+    
+    <div class="cta-buttons">
+        <slot />
+    </div>
+
+    
+</section>

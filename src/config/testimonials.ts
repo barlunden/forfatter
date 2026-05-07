@@ -1,0 +1,5 @@
+export const testimonials = [
+    { quote: "Eg stoppar innom kvar laurdag på veg heim frå yogaen. Det har blitt ein del av veka eg ikkje vil vere utan. Brødet held seg dessutan heile helga — det seier noko om kvaliteten.", name: "Marte Solberg", title: "Fastlege, Bergen", image: "https://i.pravatar.cc/100?u=marte", rating: 5 },
+    { quote: "Vi serverer Elden sitt landbrød til alle rettar. Gjestene spør jamnleg kvar vi får det frå.", name: "Kristoffer Næss", title: "Kjøkkensjef, Restaurant Volund", image: "https://i.pravatar.cc/100?u=bobby", rating: 4 },
+    { quote: "Eg trudde surdeig var for dei spesielt interesserte. Etter kurset hjå Elden baker eg kvar veke. Dei forklarar kvifor ting skjer i deigen — ikkje berre korleis.", name: "Ingrid Flatland", title: "Lærar, Voss", image: "https://i.pravatar.cc/100?u=voss", rating: 5 },
+]
