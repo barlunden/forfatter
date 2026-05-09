@@ -9,8 +9,8 @@ interface Props {
 const { heading, ingress } = Astro.props
 ---
 <section class="cta-container">
-    <h2 class="section-header">{heading}</h2>
-    {ingress && <p class="section-ingress">{ingress}</p>}
+    <h2 class="cta-header">{heading}</h2>
+    {ingress && <p class="cta-ingress">{ingress}</p>}
     
     <div class="cta-buttons">
         <slot />

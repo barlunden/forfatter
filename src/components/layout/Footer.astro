@@ -8,14 +8,19 @@ import { navLinks } from "../../config/nav";
 ---
 
 <footer class="footer">
-  <div class="footer-title">
-    <h3>{companyDetails.name}</h3>
-    <p>Bakt med surdeig sidan 1975</p>
-  </div>
   <section class="footer-cols">
     <div class="footer-container-1">
-      <h4 class="footer-container-header">Finn oss</h4>
-      <div class="footer-address">
+      <h4 class="footer-container-header">{companyDetails.name}</h4>
+      <p class="footer-value">"Skriven mellom to språk"</p>
+    </div>
+  
+  <div class="footer-container-2">
+    <h4 class="footer-container-header">Navigasjon</h4>
+    {navLinks.map((p) => <a href={p.href}>{p.name}</a>)}
+  </div>
+  <div class="footer-container-3">
+    <h4 class="footer-container-header">Kontakt</h4>
+    <div class="footer-address">
         <Icon name="mdi:email" class="size-6 shrink-0" /><p>
           {companyDetails.email}
         </p>
@@ -31,14 +36,6 @@ import { navLinks } from "../../config/nav";
         <Icon name="mdi:phone" class="w-5 h-5 mt-1 shrink-0" />
         <p>{companyDetails.phone}</p>
     </div>
-    </div>
-  
-  <div class="footer-container-2">
-    <h4 class="footer-container-header">Navigasjon</h4>
-    {navLinks.map((p) => <a href={p.href}>{p.name}</a>)}
-  </div>
-  <div class="footer-container-3">
-    <h4 class="footer-container-header">Følg oss</h4>
     <div class="footer-some-container">
 
       {
@@ -51,5 +48,5 @@ import { navLinks } from "../../config/nav";
     </div>
   </div>
   </section>
-  <div class="copyright"><p>&copy {currentYear} Elden Bakeri</p></div>
+  <div class="copyright"><p>&copy {companyDetails.name} {currentYear}</p></div>
 </footer>

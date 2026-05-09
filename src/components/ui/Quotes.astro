@@ -16,10 +16,10 @@ const { quote, name, title, rating, image } = Astro.props;
 
   <div class="testimonial-author">
     {image && <img src={image} alt={name} class="testimonial-avatar" />}
-    <div>
+  <div>
       <cite class="testimonial-name">{name}</cite>
       <p class="testimonial-title">{title}</p>
     </div>
   </div>
-  <p class="testimonial-rating">{"★".repeat(rating)}{"☆".repeat(5 - rating)}</p>
+ <!--  <p class="testimonial-rating">{"★".repeat(rating)}{"☆".repeat(5 - rating)}</p> -->
 </section>

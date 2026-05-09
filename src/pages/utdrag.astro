@@ -1,0 +1,15 @@
+---
+import { getEntry, render } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/sections/BlogPost.astro";
+const excerpt = await getEntry("excerpts", "tidevatnet");
+if (!excerpt) throw new Error("Excerpt not found");
+const { Content } = await render(excerpt);
+---
+
+<BaseLayout title="Utdrag">
+  <BlogPost title={excerpt.data.title} type={excerpt.data.type}>
+    <Content />
+  </BlogPost>
+</BaseLayout>

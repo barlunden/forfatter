@@ -1,0 +1,19 @@
+---
+import { getEntry } from "astro:content";
+
+interface Props {
+    title: string;
+    type: string;
+}
+
+const { title, type } = Astro.props;
+
+---
+
+<section class="">
+  <div class="blog-container prose">
+    <h2>{title}</h2>
+    <p class="italic">{type}</p>
+    <slot />
+  </div>
+</section>

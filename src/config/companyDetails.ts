@@ -1,12 +1,12 @@
 export const companyDetails = {
-  name: "Elden Bakeri",
-  email: "elden@bakeri.no",
-  streetAddress: "Havreveien 7",
-  postalCode: 1678,
-  address: "Hvetebyggbru",
-  phone: "+47 418 13 671",
+  name: "Antoine Barnard",
+  email: "antoine@barnard.no",
+  streetAddress: "Strandgaten 42",
+  postalCode: 5004,
+  address: "Bergen",
+  phone: "+47 922 45 881",
   social: [
-    { platform: "facebook", url: "https://facebook.com", icon: "mdi:facebook" },
-    { platform: "instagram", url: "https://instagram.com", icon: "mdi:instagram" },
-]
+    { platform: "facebook", url: "https://facebook.com/antoinebarnard", icon: "mdi:facebook" },
+    { platform: "instagram", url: "https://instagram.com/antoinebarnard", icon: "mdi:instagram" },
+  ]
 };

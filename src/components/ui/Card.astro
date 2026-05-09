@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-    icon: string;
+    icon?: string;
     heading: string;
     body: string;
     cta: string;
@@ -13,7 +13,7 @@ const { icon, heading, body, cta } = Astro.props;
 ---
 
 <article class="card">
-  <Icon name={icon} class="w-12 h-12 place-self-center pt-2" />
+  {icon && <Icon name={icon} class="size-8 place-self-center pt-2" />}
   <h3
     class="card-header"
   >

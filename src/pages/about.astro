@@ -1,7 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TwoColumn from "../components/sections/TwoColumn.astro";
+import TextBlock from "../components/ui/TextBlock.astro";
+import ImageBlock from "../components/ui/ImageBlock.astro";
+import { getEntry } from "astro:content";
+
+const about = await getEntry("about", "forfatterbio");
+if (!about)
+  throw new Error("Could not find 'forfatterbio' in 'about' collection");
+
+import { render } from "astro:content";
+const { Content } = await render(about);
+
+import author from "../assets/images/author.png";
 ---
 
-<BaseLayout title="Front page">
-  <h1>About us</h1>
+<BaseLayout title="Author bio">
+  <TwoColumn>
+    <TextBlock
+      slot="right"
+      name={about.data.name}
+      title={about.data.title}
+    >
+      <Content />
+    </TextBlock>
+    <ImageBlock slot="left" image={author} imageAlt="Author portrait" />
+  </TwoColumn>
 </BaseLayout>

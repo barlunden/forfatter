@@ -1,5 +1,23 @@
 export const testimonials = [
-    { quote: "Eg stoppar innom kvar laurdag på veg heim frå yogaen. Det har blitt ein del av veka eg ikkje vil vere utan. Brødet held seg dessutan heile helga — det seier noko om kvaliteten.", name: "Marte Solberg", title: "Fastlege, Bergen", image: "https://i.pravatar.cc/100?u=marte", rating: 5 },
-    { quote: "Vi serverer Elden sitt landbrød til alle rettar. Gjestene spør jamnleg kvar vi får det frå.", name: "Kristoffer Næss", title: "Kjøkkensjef, Restaurant Volund", image: "https://i.pravatar.cc/100?u=bobby", rating: 4 },
-    { quote: "Eg trudde surdeig var for dei spesielt interesserte. Etter kurset hjå Elden baker eg kvar veke. Dei forklarar kvifor ting skjer i deigen — ikkje berre korleis.", name: "Ingrid Flatland", title: "Lærar, Voss", image: "https://i.pravatar.cc/100?u=voss", rating: 5 },
+    { 
+        quote: "Barnard skriv med ein ro som er sjeldan i norsk samtidslitteratur. Dette er ei debutbok som ikkje forklarer seg — ho berre er, og det er meir enn nok.", 
+        name: "Silje Egilsdatter", 
+        title: "Litteraturkritikar, Gangens Verd", 
+        image: "https://i.pravatar.cc/70?u=silje", 
+        rating: 5 
+    },
+    { 
+        quote: "Eg las henne på ein dag og tenkjer på henne framleis. Det er det beste eg kan seie om ei bok.", 
+        name: "Hanna Brakkland", 
+        title: "Forfattar", 
+        image: "https://i.pravatar.cc/70?u=hanna", 
+        rating: 5 
+    },
+    { 
+        quote: "Eg er ikkje den som les mykje, men denne tok eg ikkje ned på natta. Noko ved henne sit att på ein måte eg ikkje heilt forstår.", 
+        name: "Torgeir Brandt", 
+        title: "Lesar, Ålesund", 
+        rating: 4,
+        image: "https://i.pravatar.cc/70?u=brandt", 
+    },
 ]

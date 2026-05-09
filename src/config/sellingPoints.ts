@@ -1,6 +1,26 @@
 export const sellingPoints = [
-    { icon: "mdi:fire", heading: "Tid tek ingen snarveg", body: "Surdeigen vår er årevis gamal. Han gjer jobben sakte — og det syner på smaken.", cta: "Slik bakar vi" },
-    { icon: "mdi:wheat", heading: "Korn frå nabogarden", body: "Vi hentar råvarene våre frå norske gardar vi kjenner og stoler på.", cta: "Møt råvarene" },
-    { icon: "mdi:hand", heading: "Forma for hand", body: "Ingen maskinar formar deigen vår. Det gjer vi — kvar einaste morgon.", cta: "Om bakeriet" },
-    { icon: "mdi:coffee", heading: "Lær deg surdeig", body: "Vi held kurs for alle som vil forstå kva som skjer i deigen — frå blanding til ferdig brød.", cta: "Sjå kurskalender" },
+    { 
+        icon: "", 
+        heading: "Ei bok om det som ikkje slepp taket", 
+        body: "Tidevatnet trekkjer seg attende — men noko blir alltid liggjande att. Ein roman om tap, tid og det vi ikkje greier å sleppe.", 
+        cta: "Les eit utdrag" 
+    },
+    { 
+        icon: "", 
+        heading: "Prosa som set seg i kroppen", 
+        body: "Barnard skriv tett og stille. Setningane er korte, men dei ber på mykje — som god lyrikk gjer.", 
+        cta: "Om forfattaren" 
+    },
+    { 
+        icon: "", 
+        heading: "For deg som les med blyanten framme", 
+        body: "Dette er ei bok for den som likar å stoppe opp, lese om att og tenkje seg om. Ho har ikkje det travelt.", 
+        cta: "Kjøp boka" 
+    },
+    { 
+        icon: "", 
+        heading: "Skriven mellom to språk", 
+        body: "Antoine Barnard skriv på norsk med fransk blikk. Det gjev prosaen ein eigen rytme — litt framand, heilt presis.", 
+        cta: "Les meir" 
+    },
 ]

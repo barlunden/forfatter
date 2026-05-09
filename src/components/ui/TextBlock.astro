@@ -1,0 +1,31 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+  heading?: string;
+  name: string;
+  title: string;
+  buttons?: { txt: string; link: string; variant?: "primary" | "secondary" }[];
+}
+
+const { heading, name, title, buttons = [] } = Astro.props;
+---
+
+<section class="text-block">
+  <div class="p-fluid">
+    {name && <h2 class="">{name}</h2>}
+    {title && <h3 class="tb-subheader">- {title}</h3>}
+    <slot />
+    {
+      buttons.length > 0 && (
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {buttons.map((btn) => (
+            <Button href={btn.link} variant={btn.variant}>
+              {btn.txt}
+            </Button>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>
