@@ -54,7 +54,7 @@
 
   /* HERO */
   .hero-full {
-    @apply relative w-full h-screen flex bg-cover bg-[url(../assets/images/hero.png)] bg-center bg-no-repeat bg-fixed;
+    @apply relative w-full h-screen flex bg-cover bg-center bg-no-repeat bg-fixed;
   }
 
   .hero-overlay {
