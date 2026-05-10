@@ -12,7 +12,7 @@ const { image, imageSrc, imageAlt } = Astro.props;
 ---
 <section class="image-block">
     <div class="p-image">
-        {image && <Image src={image} alt={imageAlt} class="rounded-4xl grayscale" />}
+        {image && <Image src={image} alt={imageAlt} class="rounded-sm grayscale" />}
         {imageSrc && <img src={imageSrc} alt={imageAlt} class="rounded-4xl" />}
     </div>
 </section>

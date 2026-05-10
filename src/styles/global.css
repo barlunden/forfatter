@@ -234,7 +234,7 @@
   ---------------------------- */
 
   .text-block {
-    @apply bg-background;
+    @apply bg-surface;
   }
   .text-block h1 {
     @apply text-headers font-heading font-bold pb-4;
@@ -246,7 +246,7 @@
     @apply text-card-headers font-body text-text-light pb-3;
   }
   .text-block p {
-    @apply pb-6 font-body leading-loose;
+    @apply pb-6 font-body text-card-headers leading-loose;
   }
 
   .text-block strong {
