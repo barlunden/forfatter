@@ -54,11 +54,11 @@
 
   /* HERO */
   .hero-full {
-    @apply relative w-full h-screen flex bg-cover bg-center bg-no-repeat bg-fixed;
+    @apply relative w-full h-screen flex;
   }
 
   .hero-overlay {
-    @apply bg-black/50 w-full h-full flex items-center justify-center;
+    @apply absolute inset-0 bg-black/50 flex items-center justify-center z-10;
   }
 
   .hero-content {
@@ -79,6 +79,7 @@
 
   /* SiteWide Rules */
 
+
   /* Buttons */
   .btn {
     @apply inline-flex items-center justify-center px-4 py-2 rounded-xl font-bold transition-all duration-200 cursor-pointer font-body;
@@ -89,7 +90,7 @@
   }
 
   .btn-secondary {
-    @apply  text-primary bg-background hover:bg-background/60;
+    @apply text-primary bg-background hover:bg-background/60;
   }
 
   .btn-white {
@@ -189,7 +190,7 @@
   .faq-question {
     @apply font-body font-semibold text-lg;
   }
-/* 
+  /* 
   .faq-question::before {
     content: "\003F"; 
     @apply absolute top-2 md:top-3 left-3 md:left-4 text-3xl md:text-4xl text-accent;
@@ -208,11 +209,11 @@
   }
 
   .cta-header {
-    @apply text-7xl font-heading pb-12
+    @apply text-7xl font-heading pb-12;
   }
 
   .cta-ingress {
-    @apply font-body text-accent text-lg
+    @apply font-body text-accent text-lg;
   }
 
   .cta-buttons {
@@ -228,6 +229,13 @@
     @apply grid grid-cols-1 md:grid-cols-2;
   }
 
+  /* ----------------------------
+  Text Block
+  ---------------------------- */
+
+  .text-block {
+    @apply bg-background;
+  }
   .text-block h1 {
     @apply text-headers font-heading font-bold pb-4;
   }
@@ -242,7 +250,7 @@
   }
 
   .text-block strong {
-    @apply font-semibold
+    @apply font-semibold;
   }
 
   .text-block em {
@@ -255,14 +263,8 @@
   }
 
   /* ----------------------------
-  Text Block
-  ---------------------------- */
- 
-
-
-  /* ----------------------------
   Footer
-  -----------------------------*/
+  ---------------------------- */
 
   .footer {
     @apply bg-primary text-accent pb-5;
@@ -281,9 +283,9 @@
   }
 
   .footer-value {
-    @apply font-heading italic text-2xl
+    @apply font-heading italic text-2xl;
   }
-  
+
   .footer-address {
     @apply flex gap-2 items-start pb-2;
   }

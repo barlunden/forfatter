@@ -1,14 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
 
 interface Props {
     icon?: string;
     heading: string;
     body: string;
     cta: string;
+    link?: string;
 }
 
-const { icon, heading, body, cta } = Astro.props;
+const { icon, heading, body, cta, link } = Astro.props;
 
 ---
 
@@ -20,5 +22,6 @@ const { icon, heading, body, cta } = Astro.props;
     {heading}
   </h3>
   <p class="card-body">{body}</p>
-  <a href="#" class="btn btn-secondary block text-center mx-auto mt-3">{cta}</a>
+  {link &&
+  <Button  href={link} class="btn btn-secondary mt-3">{cta}</Button>}
 </article>

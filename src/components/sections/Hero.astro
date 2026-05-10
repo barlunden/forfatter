@@ -1,20 +1,21 @@
 ---
 import { Image } from "astro:assets";
 import hero from "../../assets/images/hero.png"
+import Button from "../ui/Button.astro";
 ---
 
 <header class="hero-full">
   <Image 
-        src={hero} 
-        alt="" 
-        class="absolute inset-0 w-full h-full object-cover"
-    />
+    src={hero} 
+    alt="" 
+    class="absolute inset-0 w-full h-full object-cover z-0"
+/>
   <div class="hero-overlay">
     <div class="hero-content z-99">
       <h1 class="hero-title">Alt som er att er tidevatnet.</h1>
       <p class="hero-ingress">Antoine Barnards debut er ein roman om det vi held att, og det som forsvinn likevel.</p>
       <div class="cta-group">
-        <a href="/utdrag" class="btn btn-primary">Les eit utdrag</a>
+        <Button href="/utdrag" class="btn btn-primary">Les eit utdrag</Button>
       </div>
     </div>
   </div>
